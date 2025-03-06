@@ -1,10 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiTEK AS - Nettløsning</title>
+    <title>HiTEK AS - Teknologi på sitt mest ekstreme</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function getGamingTip() {
+            const tips = [
+                "Husk å blinke mellom headshots!", 
+                "Hvis PC-en din blir for varm, prøv å sette den i kjøleskapet. (Nei, ikke gjør det)", 
+                "Trenger du bedre FPS? Prøv å fjerne alle Chrome-fanene du har hatt åpne siden 2015!", 
+                "Gaming-stolen din gir +10 i AIM hvis du sitter riktig.",
+                "Hvis du taper i et spill, skyld alltid på laggen eller dårlig nettkobling."
+            ];
+            return tips[Math.floor(Math.random() * tips.length)];
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -19,30 +31,20 @@
     </header>
     
     <main>
-        <section id="intro">
-            <h1>Velkommen til HiTEK AS</h1>
-            <p>Vi gir deg den beste guiden for valg av riktig IT-utstyr!</p>
-        </section>
+        <h1>Velkommen til HiTEK AS</h1>
+        <p>Vi i HiTEK AS er dedikerte til å gi deg **den ultimate teknologiske opplevelsen**! Om du er en casual nettleser, en hardcore gamer, eller en profesjonell videoeditor – vi har utstyret du trenger.</p>
         
-        <section id="kjopsguide">
-            <h2>Kjøpsguide</h2>
-            <ul>
-                <li><strong>Enkel laptop:</strong> Perfekt for skrivebordapplikasjoner og nettlesing.</li>
-                <li><strong>Gaming-PC:</strong> Bygget for Call of Duty Black Ops 6 og andre krevende spill.</li>
-                <li><strong>Podcast/Dubbing-utstyr:</strong> Profesjonelt utstyr for høy lydkvalitet.</li>
-            </ul>
-        </section>
+        <h2>⚠️ Teknologiavhengighets-advarsel ⚠️</h2>
+        <p>Bruk av HiTEK-produkter kan føre til: Overdreven gaming, lynraske museklikk, ustanselig FPS-boosting, og en generell følelse av teknologisk overlegenhet.</p>
         
-        <section id="komponenter">
-            <h2>Datakomponenter</h2>
-            <p>Her finner du en oversikt over de viktigste komponentene i en PC:</p>
-            <ul>
-                <li>Prosessor (CPU) - hjernen i datamaskinen.</li>
-                <li>Skjermkort (GPU) - for høy ytelse i spill og grafikk.</li>
-                <li>RAM - for rask multitasking.</li>
-                <li>SSD/HDD - lagring for operativsystem og filer.</li>
-            </ul>
-        </section>
+        <button onclick="window.location.href='kjopsguide.html'" style="display:block; margin: 20px auto; padding: 15px; font-size: 18px; background-color: #007BFF; color: white; border: none; cursor: pointer; border-radius: 8px;">🚀 Sjekk ut vår episke Kjøpsguide!</button>
+        
+        <h2>Dagens gaming-tips 🎮</h2>
+        <p id="gamingTip" style="font-style: italic; color: #555;">Laster inn...</p>
+        
+        <script>
+            document.getElementById("gamingTip").innerText = getGamingTip();
+        </script>
     </main>
     
     <footer>
